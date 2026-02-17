@@ -61,7 +61,7 @@ public class Trailer {
         return id;
     }
 
-    public String getname() {
+    public String getName() {
         return name;
     }
 
@@ -102,7 +102,7 @@ public class Trailer {
         this.id = id;
     }
 
-    public void name(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -170,7 +170,7 @@ public class Trailer {
             this.id = id;
             return this;
         }
-        public Builder name(String name) {
+        public Builder setName(String name) {
             this.name = name;
             return this;
         }
