@@ -4,6 +4,8 @@ import tr.ac.co.domain.User;
 import tr.ac.co.domain.enums.Role;
 import tr.ac.co.util.Helper;
 
+import java.time.LocalDateTime;
+
 
 public class UserFactory {
 
@@ -11,7 +13,8 @@ public class UserFactory {
                                   String lastName,
                                   String email,
                                   String password,
-                                  Role role){
+                                  Role role,
+                                  LocalDateTime createdAt){
 
         if (Helper.isNullOrEmpty(firstName)
                 || Helper.isNullOrEmpty(lastName)
@@ -34,6 +37,6 @@ public class UserFactory {
                                    String lastName,
                                    String email,
                                    String password) {
-        return createUser(firstName, lastName, email, password, Role.ADMIN);
+        return createUser(firstName, lastName, email, password, Role.ADMIN, LocalDateTime.now());
     }
 }
